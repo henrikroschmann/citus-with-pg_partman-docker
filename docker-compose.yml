@@ -1,6 +1,6 @@
 services:
   master:
-    image: cituswithpgpartmandocker:latest  # Use the name of your custom-built image
+    image: cituswithpgpartmandocker:latest
     container_name: citus_master
     environment:
       POSTGRES_USER: myuser
