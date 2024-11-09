@@ -62,7 +62,7 @@ An example `docker-compose.yml` file is provided for configuring a Citus cluster
 version: '3'
 services:
   citus_master:
-    image: cituswithpgpartmandocker:latest
+    image: henrikroschmann/citus-with-pg_partman-docker:latest
     environment:
       POSTGRES_PASSWORD: password
     ports:
@@ -75,7 +75,7 @@ services:
       start_period: 6s
 
   citus_worker:
-    image: cituswithpgpartmandocker:latest
+    image: henrikroschmann/citus-with-pg_partman-docker:latest
     environment:
       POSTGRES_PASSWORD: password
     deploy:
