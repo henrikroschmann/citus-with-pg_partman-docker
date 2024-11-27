@@ -19,7 +19,7 @@ COMMIT;
 
 \c postgres
 
-Begin 
+BEGIN;
 
 CREATE EXTENSION pg_cron;
 
