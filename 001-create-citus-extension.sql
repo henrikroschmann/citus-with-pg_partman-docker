@@ -7,8 +7,6 @@ CREATE EXTENSION pg_partman WITH SCHEMA partman;
 
 CREATE EXTENSION citus;
 
-CREATE EXTENSION pg_cron;
-
 CREATE EXTENSION citext;
 
 CREATE EXTENSION hstore;
@@ -16,5 +14,13 @@ CREATE EXTENSION hstore;
 UPDATE pg_dist_node_metadata
 SET
     metadata = jsonb_insert(metadata, '{docker}', 'true');
+
+COMMIT;
+
+\c postgres
+
+Begin 
+
+CREATE EXTENSION pg_cron;
 
 COMMIT;
